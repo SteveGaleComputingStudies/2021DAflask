@@ -1,2 +1,2 @@
 # 2021DAflask
-Flask introductory exrecises
+Flask introductory exercises
