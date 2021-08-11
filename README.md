@@ -1,6 +1,8 @@
 # 2021DAflask
 Flask introductory exercises
 
+c:\Python37> python -m pip install flask  
+
 # ex1 - First Flask app
 
 # ex2 - Routing
