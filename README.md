@@ -35,7 +35,7 @@ DELETE	Deletes the target resource of a given URL
 
 # ex8 - Json api response
 
-# ex9 - Json api request
+# ex9 - Json api request and response
 
 # ex10  - sessions
 
