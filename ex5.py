@@ -3,7 +3,7 @@
 # https://flask.palletsprojects.com/en/2.0.x/quickstart/#http-methods
 # https://flask.palletsprojects.com/en/2.0.x/quickstart/#the-request-object
 # run the python file (VScode - Run Python File in Terminal) amd open browser to http://localhost:5000/login 
-from flask import Flask, session, request, redirect , url_for, render_template 
+from flask import Flask, request, redirect , url_for, render_template 
 app = Flask(__name__) # Flask constructor
 
 @app.route('/loggedin/<name>')
@@ -12,10 +12,10 @@ def loggedin(name):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
+    if request.method == 'POST':                                               # procees HTTP POST
         userName =  request.form['username']                                # gets the form key / value pair - gets the value for 'username'
         return redirect(url_for('loggedin', name = userName))               # loggedin page as name variable value  = username
-    return render_template("ex5.html")                                      # render ex5.html if not yet logged in om templates folder in project
+    return render_template("ex5.html")                                      # procees HTTP GET - render ex5.html if not yet logged in om templates folder in project
     '''
         <form method="post">
             <p><input type=text name=username>
