@@ -33,7 +33,7 @@ DELETE	Deletes the target resource of a given URL
 
 # ex6 - Static files and templates
 
-# ex7 - Jina2 templating
+# ex7 - Jinja2 templating
 
 # ex8 - Json api response
 
