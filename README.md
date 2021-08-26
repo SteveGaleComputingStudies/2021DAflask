@@ -60,3 +60,6 @@ DELETE	Deletes the target resource of a given URL
 406 – For Not acceptable  
 425 – For Unsupported Media  
 429 – Too many Requests  
+
+
+# End  
