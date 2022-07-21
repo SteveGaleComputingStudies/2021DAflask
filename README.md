@@ -60,3 +60,110 @@ DELETE	Deletes the target resource of a given URL
 406 – For Not acceptable  
 425 – For Unsupported Media  
 429 – Too many Requests  
+
+
+# setup RPi
+# image the Raspberry Pi
+raspberry Pi imager v1.61  
+Raspberry pi OS (32-bit) to SDHC card 16Gig  
+
+# connect device and first boot
+https://www.raspberrypi.com/documentation/computers/getting-started.html
+Connect up hdmi , keyboard, mouse and boot 
+Select country, language , timezone 
+Confirm screen display 
+Wifi search - select ssid and enter password 
+Software update – download updates, install updates 
+Restart 
+
+# configure Rpi
+## SSH install  
+
+```
+$sudo systemctl enable ssh 
+$sudo systemctl start ssh 
+$ip a    - note down ip address eg 10.0.0.67
+```
+## SSH into Rpi
+```
+C:>putty.exe -ssh pi@10.0.0.67 22
+
+```
+## RDP install – remote desktop protocol 
+```
+#sudo apt install xrdp 
+#sudo service xrdp start 
+```
+# RDP into Rpi to setup dev environment
+on windows start rdp client
+c:>mstsc.exe /v:10.0.0.67:3389
+
+## install VScode
+```
+$sudo apt install code -y
+$sudo apt install git
+```
+
+## clone repository xxx.git
+```
+$git clone xxx.git
+
+```
+
+## run vscode with cloned project
+```
+$cd xxx
+$code .
+```
+Install extensions - Python extension 
+
+## install python libraries (can be done from VScode terminal window)
+```
+$python3 -m pip install flask
+$python3 -m pip install --upgrade flask
+```
+
+## run project (can be done from VScode terminal window)
+```
+$sudo python3 solarHvac.py
+```
+
+## update project and re-run
+```
+C:>putty.exe -ssh pi@10.0.0.67 22
+$cd SolarHVAC  
+$git pull
+$sudo python3 solarHvac.py 
+```
+
+# run Flask app as cron task
+https://www.raspberrypi.org/documentation/linux/usage/cron.md
+```
+$crontab –e 
+
+@reboot sudo python3 /home/pi/SolarHVAC/solarHvac.py & 
+
+$sudo reboot 
+```
+# Enable I2C 
+```
+Preferences > Raspberry Pi Configuration – Interfaces 
+I2C * Enable [OK] 
+```
+## Test I2c and look for device addresses
+```
+#sudo apt-get install -y i2c-tools 
+#i2cdetect -y 1 
+
+    0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f 
+
+00:          -- -- -- -- -- 08 -- -- -- -- -- -- --  
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- 1e --  
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+60: 60 -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  
+70: -- -- -- -- -- -- -- --  
+```
+```
