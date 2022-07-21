@@ -125,15 +125,15 @@ $python3 -m pip install --upgrade flask
 
 ## run project (can be done from VScode terminal window)
 ```
-$sudo python3 solarHvac.py
+$sudo python3 xxxx.py
 ```
 
 ## update project and re-run
 ```
 C:>putty.exe -ssh pi@10.0.0.67 22
-$cd SolarHVAC  
+$cd 2021DAflask  
 $git pull
-$sudo python3 solarHvac.py 
+$sudo python3 xxx.py 
 ```
 
 # run Flask app as cron task
@@ -141,7 +141,7 @@ https://www.raspberrypi.org/documentation/linux/usage/cron.md
 ```
 $crontab –e 
 
-@reboot sudo python3 /home/pi/SolarHVAC/solarHvac.py & 
+@reboot sudo python3 /home/pi/2021DAflask/xxx.py & 
 
 $sudo reboot 
 ```
