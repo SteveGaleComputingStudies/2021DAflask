@@ -64,10 +64,11 @@ DELETE	Deletes the target resource of a given URL
 
 # setup RPi
 # image the Raspberry Pi
-raspberry Pi imager v1.61  
-Raspberry pi OS (32-bit) to SDHC card 16Gig  
+raspberry Pi imager v1.72    
+Raspberry pi OS (32-bit) to SDHC card 16Gig 
+in options set to enable ssh , and set your Wifi SSID , etc    
 
-# connect device and first boot
+# OR connect device and first boot
 https://www.raspberrypi.com/documentation/computers/getting-started.html
 Connect up hdmi , keyboard, mouse and boot 
 Select country, language , timezone 
@@ -77,7 +78,7 @@ Software update – download updates, install updates
 Restart 
 
 # configure Rpi
-## SSH install  
+## SSH install (If not done by installer)  
 
 ```
 $sudo systemctl enable ssh 
@@ -104,21 +105,22 @@ $sudo apt install code -y
 $sudo apt install git
 ```
 
-## clone repository xxx.git
+## clone repository 2021DAflask  
 ```
-$git clone yyy.git
+$git clone https://github.com/SteveGaleComputingStudies/2021DAflask.git  
 
 ```
 
 ## run vscode with cloned project
 ```
-$cd xxx
+$cd 2021DAflask  
 $code .
 ```
 Install extensions - Python extension 
 
 ## install python libraries (can be done from VScode terminal window)
 ```
+$sudo apt install python3-pip
 $python3 -m pip install flask
 $python3 -m pip install --upgrade flask
 ```
