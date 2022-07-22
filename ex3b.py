@@ -11,10 +11,10 @@ app = Flask(__name__) # Flask constructor
 
 
 # route - bind function to app path with variable passed as function argument
-@app.route('/ex3/<uuid:legitUserUuid>')	
+@app.route('/ex3/<uuid:legitUserUuid>')	                    # specify uuid variable type
 def ex3a(legitUserUuid):                                    # note variable can be an int, float , default is string
 	return 'Exercise 3 id is {}'.format(legitUserUuid)
 
 # run the app
 if __name__=='__main__':
-    app.run()
+    app.run(host='0.0.0.0')

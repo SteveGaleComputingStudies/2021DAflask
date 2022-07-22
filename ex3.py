@@ -16,4 +16,4 @@ def ex3(id):                                    # note variable can be an int, f
 
 # run the app
 if __name__=='__main__':
-    app.run()
+    app.run(host='0.0.0.0')

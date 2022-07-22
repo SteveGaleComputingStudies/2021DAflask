@@ -21,10 +21,10 @@ def displayLightLevel(value):
 @app.route('/ex4/<measurement>')	
 def ex4(measurement): 
     if measurement == 'Temperature':                              
-        return redirect(url_for('displayTemperature', value = 21))      # URL redirection (to function) with parameter value
+        return redirect(url_for('displayTemperature', value = 24))      # URL redirection (to function) with parameter value
     else:
         return redirect(url_for('displayLightLevel', value = 200))      # URL redirection (to function) with parameter value 
 
 # run the app
 if __name__=='__main__':
-    app.run()
+    app.run(host='0.0.0.0', debug=True)
