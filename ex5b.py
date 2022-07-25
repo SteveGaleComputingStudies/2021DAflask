@@ -1,4 +1,4 @@
-# Rendering HTML from a template
+# HTTP Methods and request object
 # exercise 5
 # https://flask.palletsprojects.com/en/2.0.x/quickstart/#http-methods
 # https://flask.palletsprojects.com/en/2.0.x/quickstart/#the-request-object
@@ -6,9 +6,15 @@
 from flask import Flask, request, redirect , url_for, render_template 
 app = Flask(__name__) # Flask constructor
 
+@app.route('/loggedin/<name>')
+def loggedin(name):
+    return 'You are logged in as {}'.format(name)
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-           # 
+    if request.method == 'POST':                                               # procees HTTP POST
+        userName =  request.form['username']                                # gets the form key / value pair - gets the value for 'username'
+        return redirect(url_for('loggedin', name = userName))               # loggedin page as name variable value  = username
     return render_template("ex5.html")                                      # procees HTTP GET - render ex5.html if not yet logged in om templates folder in project
     '''
         <form method="post">

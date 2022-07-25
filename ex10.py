@@ -7,7 +7,7 @@ app = Flask(__name__) # Flask constructor
 
 # Set the secret key to some random bytes. Keep this really secret!
 
-app.secret_key = b'_6H39ax12hdv\a\yls]/'
+app.secret_key = b'_6H39ax12hdv\a\yls]/'                    # secret key is used for cookie signing
 #                  012345678901234567890
 
 @app.route('/')
@@ -36,4 +36,4 @@ def logout():
     return redirect(url_for('index'))
 
 if __name__=='__main__':
-    app.run(debug = True)                       # added debug = True -  can make changes save and app will restart
+    app.run(host= '0.0.0.0',debug=True)                       # added debug = True -  can make changes save and app will restart

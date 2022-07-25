@@ -1,6 +1,6 @@
 # Json api request and response
 # exercise 9
-# run the python file (VScode - Run Python File in Terminal) amd run ex9test.py in idle to POST json Data
+# run the python file (VScode - Run Python File in Terminal) and run ex9test.py in idle to POST json Data
 # change the Id value in the browser Url and refresh
 # ref - https://flask.palletsprojects.com/en/2.0.x/quickstart/#apis-with-json
 

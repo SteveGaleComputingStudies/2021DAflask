@@ -13,4 +13,4 @@ def ex6():
 
 # run the app
 if __name__=='__main__':
-    app.run(debug = True)                       # added debug = True -  can make changes save and app will restart
+    app.run(host='0.0.0.0', debug=True)                       # added debug = True -  can make changes save and app will restart

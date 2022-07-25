@@ -1,5 +1,6 @@
 # Jinja templates b
 # exercise 7b
+# ex7b - pass dictionary elmements to a HTML template referenced by key  
 # run the python file (VScode - Run Python File in Terminal) amd open browser to http://localhost:5000/ex7b/Bill
 
 from flask import Flask	, render_template       # added import
@@ -18,4 +19,4 @@ def ex7b(name):
 
 # run the app
 if __name__=='__main__':
-    app.run(debug = True)                       # added debug = True -  can make changes save and app will restart
+    app.run(host='0.0.0.0', debug=True)                       # added debug = True -  can make changes save and app will restart

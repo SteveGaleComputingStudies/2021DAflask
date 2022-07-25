@@ -1,5 +1,6 @@
 # Jinja templates a
 # exercise 7a
+# ex7a - pass user variable to a HTML template 
 # run the python file (VScode - Run Python File in Terminal) amd open browser to http://localhost:5000/ex7a/Bill
 
 from flask import Flask	, render_template       # added import
@@ -13,4 +14,4 @@ def ex7a(name):
 
 # run the app
 if __name__=='__main__':
-    app.run(debug = True)                       # added debug = True -  can make changes save and app will restart
+    app.run(host='0.0.0.0', debug=True)                       # added debug = True -  can make changes save and app will restart

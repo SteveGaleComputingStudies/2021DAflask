@@ -4,6 +4,10 @@ Flask introductory exercises
 c:\Python37> python -m pip install flask  
 
 # ex1 - First Flask app
+ex1 - app routing, use @app.route('/') to bind function to app path specified  
+ex1a - return HTML  
+ex1b - safe removal of control characters eg cross site scripting  
+ex1c - server running on port 80, accessible remotely - host='0.0.0.0', port=80, debug=True   
 
 # ex2 - Routing
 
@@ -23,6 +27,8 @@ uuid  - UUID strings
 # ex4 - Using URLs with redirection
 
 # ex5 - HTTP methods and request object
+ex5a rendering from a HTML template  
+ex5b HTML form processing  
 
 ## http methods supported
 GET	    This is used to send the data in an without encryption of the form to the server.  
@@ -32,16 +38,23 @@ PUT	    Replaces current representation of target resource with URL.
 DELETE	Deletes the target resource of a given URL  
 
 # ex6 - Static files and templates
+ex6 rendering from a HTML template with javascript file  
 
 # ex7 - Jinja2 templating
+ex7a - pass user variable to a HTML template  
+ex7b - pass dictionary elmements to a HTML template referenced by key    
 
 # ex8 - Json api response
+ex8 - returns a Json api response populated by variable value  
 
 # ex9 - Json api request and response
+ex9 - Json api request and response , run ex9test.py ( or ex9testRemote.py) in idle to POST json Data to ex9  
 
 # ex10  - sessions
 
-
+# deploy flask to AWS  
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html  
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-rds.html  
 
 # References
 
