@@ -1,5 +1,5 @@
 # Static Files and templates
-# exercise 6
+# exercise 6b (port 80)
 # run the python file (VScode - Run Python File in Terminal) amd open browser to http://localhost:5000/ex6
 
 from flask import Flask	, render_template       # added import
